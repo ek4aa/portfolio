@@ -1,5 +1,3 @@
-
-
 .intro {
   padding: 100px 100px;
   height: 100vh;
@@ -8,52 +6,73 @@
   justify-content: space-around;
   max-width: 1440px;
   margin: 0 auto;
+
   @include weird-medium {
     padding: 120px 70px;
   }
+
   @include phablet {
     padding: 120px 50px;
   }
+
   @include mobile {
     padding: 70px 50px;
   }
 
-  &_hello, &_tagline {
+  &_hello {
     font-size: 2.5rem;
+  }
+
+  &_tagline {
+    font-size: 1.5rem;
+  }
+
+  &_hello,
+  &_tagline {
     @include desktop {
       font-size: 2.25rem;
     }
+
     @include tablet {
       font-size: 2rem;
     }
+
     @include phablet {
       font-size: 1.75rem;
     }
+
     @include small-mobile {
       font-size: 1.5rem;
     }
+
     @include tiny-mobile {
       font-size: 1.4rem;
     }
+
     .emoji {
       width: 40px;
       height: 40px;
+
       @include desktop {
         width: 35px;
         height: 35px;
       }
+
       @include tablet {
         width: 30px;
         height: 30px;
       }
+
       @include small-mobile {
         width: 25px;
         height: 25px;
       }
     }
   }
+
   &_hello {
     font-weight: 300;
+
     .wave-hand {
       // background-image: url('../../images/wave.png');
       margin-left: 10px;
@@ -63,6 +82,7 @@
         animation-duration: 1s;
         animation-fill-mode: both;
       }
+
       &.wave {
         animation-name: wave;
       }
@@ -71,43 +91,55 @@
         from {
           transform: none;
         }
+
         15% {
           transform: translate3d(-20%, 0, 0) rotate3d(0, 0, 1, -10deg);
         }
+
         30% {
           transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 7deg);
         }
+
         45% {
           transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -10deg);
         }
+
         60% {
           transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 5deg);
         }
+
         75% {
           transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
         }
+
         to {
           transform: none;
         }
       }
     }
   }
+
   &_tagline {
     font-weight: 300;
-    max-width: 700px;
+    max-width: 900px;
+
     .name {
       font-weight: 700;
     }
+
     .technologist {
       // background-image: url('technologist.png');
     }
   }
+
   &_contact {
     font-size: 1.25rem;
     font-weight: 400;
+
     @include phablet {
       font-size: 1rem;
     }
+
     .emoji {
       &.pointer {
         // background-image: url('pointright.png');
@@ -115,12 +147,14 @@
         height: 30px;
         margin: 0 5px;
         vertical-align: text-bottom;
+
         @include phablet {
           width: 25px;
           height: 25px;
         }
       }
     }
+
     .highlight-link {
       @include transition;
       font-weight: 400;
@@ -129,6 +163,7 @@
       padding: 2px 3px;
       text-decoration: none;
       box-shadow: inset 0 -3px 0 $blue;
+
       &:hover {
         box-shadow: inset 0 -33px 0 0 $blue;
         color: $white;
@@ -145,9 +180,11 @@
   right: auto;
   z-index: 10;
   display: none;
+
   @media (min-width: 768px) {
     display: block;
   }
+
   .social-media-links {
     display: flex;
     flex-direction: column;
@@ -156,6 +193,7 @@
     margin: 0px;
     padding: 0px;
     list-style: none;
+
     li a {
       padding: 8px;
       display: inline-block;
@@ -164,6 +202,7 @@
       color: $blue;
       position: relative;
     }
+
     &::after {
       content: "";
       display: block;
@@ -177,4 +216,15 @@
 
 .svg-icon {
   fill: none;
+}
+
+.top-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+  z-index: 500;
+}
+
+.top-btn a {
+  font-size: 2.5rem;
 }
